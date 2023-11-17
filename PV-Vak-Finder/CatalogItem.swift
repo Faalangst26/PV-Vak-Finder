@@ -10,9 +10,11 @@ import SwiftData
 import Foundation
 
 struct CatalogItem: View {
-    var faculty: String
+    var faculty: Faculties
     
     var body: some View {
-        Text("This is the CatalogItem page for \(faculty)")
+        Text("\(faculty.rawValue)").font(.title).padding()
+        Link("Open in Educator catalogus", destination: URL(string: "https://educator.windesheim.nl/catalog?q=ICT.PV+\(faculty.rawValue)&filter10=87888cab-43d7-11e4-87ac-1c9720524153&type=Onderwijseenheid+%28OE%29&advanced=false&tenantLabel=Educator")!)
+        
     }
 }

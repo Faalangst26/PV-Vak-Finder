@@ -28,25 +28,33 @@ struct ContentView: View {
             }
             
         }
-        
+        NavigationStack {
             VStack{
                 ForEach(SelectedFaculties) { vak in
                     if(vak.year == selectedYear){
-                            HStack {
+                        HStack {
+                            VStack{
                                 Text("Periode 1")
-                                NavigationLink(vak.period1.rawValue) {CatalogItem( faculty: vak.period1.rawValue)}.padding()
+                                NavigationLink(vak.period1.rawValue) {CatalogItem( faculty: vak.period1)}.padding()
+                            }
+                            VStack{
                                 Text("Periode 2")
-                                NavigationLink(vak.period2.rawValue) {CatalogItem( faculty: vak.period2.rawValue)}.padding()
+                                NavigationLink(vak.period2.rawValue) {CatalogItem( faculty: vak.period2)}.padding()
+                            }
+                            VStack{
                                 Text("Periode 3")
-                                NavigationLink(vak.period3.rawValue) {CatalogItem( faculty: vak.period3.rawValue)}.padding()
+                                NavigationLink(vak.period3.rawValue) {CatalogItem( faculty: vak.period3)}.padding()
+                            }
+                            VStack{
                                 Text("Periode 4")
-                                NavigationLink(vak.period4.rawValue) {CatalogItem( faculty: vak.period4.rawValue)}.padding()
+                                NavigationLink(vak.period4.rawValue) {CatalogItem( faculty: vak.period4)}.padding()
                             }.padding()
+                        }
                     }
                 }
             }.padding()
             
-            NavigationStack {
+            
                 NavigationLink("Vakken kiezen") {FacultyPicker( year: selectedYear)}.padding().buttonStyle(.borderedProminent)
             }
     }
