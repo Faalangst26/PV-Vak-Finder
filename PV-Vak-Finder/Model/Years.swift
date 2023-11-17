@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Years: String, CaseIterable, Identifiable{
+enum Years: String, CaseIterable, Identifiable, Codable{
     case two = "2022-2023", three = "2023-2024", four = "2024-2025", five = "2025-2026"
     var id: Self {self}
     

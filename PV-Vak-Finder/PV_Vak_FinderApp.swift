@@ -10,23 +10,36 @@ import SwiftData
 
 @main
 struct PV_Vak_FinderApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+    
+    
+    
+    let modelContainer: ModelContainer
+    
+    init() {
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            modelContainer = try ModelContainer(for: SelectedFaculties.self)
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            fatalError("Could not initialize ModelContainer")
         }
-    }()
+    }
+    
+//    var sharedModelContainer: ModelContainer = {
+//        let schema = Schema([
+//            Item.self,
+//        ])
+//        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+//
+//        do {
+//            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+//        } catch {
+//            fatalError("Could not create ModelContainer: \(error)")
+//        }
+//    }()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(selectedYear: Years.two)
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(modelContainer)
     }
 }

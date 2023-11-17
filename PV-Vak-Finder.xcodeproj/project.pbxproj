@@ -12,6 +12,12 @@
 		034978D92B07786B00836301 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034978D82B07786B00836301 /* Item.swift */; };
 		034978DB2B07786D00836301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034978DA2B07786D00836301 /* Assets.xcassets */; };
 		034978DE2B07786D00836301 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034978DD2B07786D00836301 /* Preview Assets.xcassets */; };
+		03AB46302B077F0800C31600 /* CatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB462F2B077F0800C31600 /* CatalogItem.swift */; };
+		03AB46342B078BA000C31600 /* Years.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB46332B078BA000C31600 /* Years.swift */; };
+		03AB46362B078EBE00C31600 /* FacultyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB46352B078EBE00C31600 /* FacultyPicker.swift */; };
+		03AB46382B07929C00C31600 /* Faculties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB46372B07929C00C31600 /* Faculties.swift */; };
+		03AB463D2B079BEC00C31600 /* SelectedFaculties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB463C2B079BEC00C31600 /* SelectedFaculties.swift */; };
+		03AB46412B07B12C00C31600 /* SwiftData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03AB46402B07B12C00C31600 /* SwiftData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,13 @@
 		034978D82B07786B00836301 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		034978DA2B07786D00836301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		034978DD2B07786D00836301 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03AB462F2B077F0800C31600 /* CatalogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItem.swift; sourceTree = "<group>"; };
+		03AB46332B078BA000C31600 /* Years.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Years.swift; sourceTree = "<group>"; };
+		03AB46352B078EBE00C31600 /* FacultyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyPicker.swift; sourceTree = "<group>"; };
+		03AB46372B07929C00C31600 /* Faculties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faculties.swift; sourceTree = "<group>"; };
+		03AB463C2B079BEC00C31600 /* SelectedFaculties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFaculties.swift; sourceTree = "<group>"; };
+		03AB46402B07B12C00C31600 /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = System/Library/Frameworks/SwiftData.framework; sourceTree = SDKROOT; };
+		03AB46422B07B13600C31600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03AB46412B07B12C00C31600 /* SwiftData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +53,7 @@
 			children = (
 				034978D32B07786B00836301 /* PV-Vak-Finder */,
 				034978D22B07786B00836301 /* Products */,
+				03AB463F2B07B12C00C31600 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,11 +68,16 @@
 		034978D32B07786B00836301 /* PV-Vak-Finder */ = {
 			isa = PBXGroup;
 			children = (
+				03AB46422B07B13600C31600 /* Info.plist */,
+				03AB463E2B079BF300C31600 /* Model */,
+				03AB462E2B077ECD00C31600 /* Data */,
 				034978D42B07786B00836301 /* PV_Vak_FinderApp.swift */,
 				034978D62B07786B00836301 /* ContentView.swift */,
 				034978D82B07786B00836301 /* Item.swift */,
 				034978DA2B07786D00836301 /* Assets.xcassets */,
 				034978DC2B07786D00836301 /* Preview Content */,
+				03AB462F2B077F0800C31600 /* CatalogItem.swift */,
+				03AB46352B078EBE00C31600 /* FacultyPicker.swift */,
 			);
 			path = "PV-Vak-Finder";
 			sourceTree = "<group>";
@@ -68,6 +88,31 @@
 				034978DD2B07786D00836301 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03AB462E2B077ECD00C31600 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				03AB463C2B079BEC00C31600 /* SelectedFaculties.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		03AB463E2B079BF300C31600 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03AB46332B078BA000C31600 /* Years.swift */,
+				03AB46372B07929C00C31600 /* Faculties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03AB463F2B07B12C00C31600 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03AB46402B07B12C00C31600 /* SwiftData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +187,11 @@
 			files = (
 				034978D72B07786B00836301 /* ContentView.swift in Sources */,
 				034978D92B07786B00836301 /* Item.swift in Sources */,
+				03AB46302B077F0800C31600 /* CatalogItem.swift in Sources */,
+				03AB463D2B079BEC00C31600 /* SelectedFaculties.swift in Sources */,
+				03AB46342B078BA000C31600 /* Years.swift in Sources */,
+				03AB46362B078EBE00C31600 /* FacultyPicker.swift in Sources */,
+				03AB46382B07929C00C31600 /* Faculties.swift in Sources */,
 				034978D52B07786B00836301 /* PV_Vak_FinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,8 +326,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PV-Vak-Finder/Preview Content\"";
+				DEVELOPMENT_TEAM = 3N79427AAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PV-Vak-Finder/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,8 +357,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PV-Vak-Finder/Preview Content\"";
+				DEVELOPMENT_TEAM = 3N79427AAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PV-Vak-Finder/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

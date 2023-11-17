@@ -10,52 +10,51 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var SelectedFaculties: [SelectedFaculties]
+    @State var selectedYear: Years
+   
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        VStack{
+            HStack{
+                Text("Schooljaar:")
+                Picker("Schooljaar", selection: $selectedYear){
+                    Text(Years.two.rawValue).tag(Years.two)
+                    Text(Years.three.rawValue).tag(Years.three)
+                    Text(Years.four.rawValue).tag(Years.four)
+                    Text(Years.five.rawValue).tag(Years.five)
+                }
+                
+            }
+            
+        }
+        
+            VStack{
+                ForEach(SelectedFaculties) { vak in
+                    if(vak.year == selectedYear){
+                            HStack {
+                                Text("Periode 1")
+                                NavigationLink(vak.period1.rawValue) {CatalogItem( faculty: vak.period1.rawValue)}.padding()
+                                Text("Periode 2")
+                                NavigationLink(vak.period2.rawValue) {CatalogItem( faculty: vak.period2.rawValue)}.padding()
+                                Text("Periode 3")
+                                NavigationLink(vak.period3.rawValue) {CatalogItem( faculty: vak.period3.rawValue)}.padding()
+                                Text("Periode 4")
+                                NavigationLink(vak.period4.rawValue) {CatalogItem( faculty: vak.period4.rawValue)}.padding()
+                            }.padding()
                     }
                 }
-                .onDelete(perform: deleteItems)
+            }.padding()
+            
+            NavigationStack {
+                NavigationLink("Vakken kiezen") {FacultyPicker( year: selectedYear)}.padding().buttonStyle(.borderedProminent)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
+    
+    
 }
 
 #Preview {
-    ContentView()
+    ContentView(selectedYear: Years.two)
         .modelContainer(for: Item.self, inMemory: true)
 }

@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier=""/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="StoredFaculties" representedClassName="StoredFaculties" syncable="YES" codeGenerationType="class">
+        <attribute name="period1" optional="YES" attributeType="String"/>
+        <attribute name="period2" optional="YES" attributeType="String"/>
+        <attribute name="period3" optional="YES" attributeType="String"/>
+        <attribute name="period4" optional="YES" attributeType="String"/>
+    </entity>
+</model>

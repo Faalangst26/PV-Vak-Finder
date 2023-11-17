@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CC2FCBE3-0A0D-4166-ADED-281FAF3CA648"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF195595-DBE1-448A-BB35-81E7F8FD8150"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PV-Vak-Finder/FacultyPicker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "saveFaculties(selyear:per1:per2:per3:per4:context:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "BF195595-DBE1-448A-BB35-81E7F8FD8150 - 8a8359b531ee3e8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PV_Vak_Finder.saveFaculties(selyear: PV_Vak_Finder.Years, per1: PV_Vak_Finder.Faculties, per2: PV_Vak_Finder.Faculties, per3: PV_Vak_Finder.Faculties, per4: PV_Vak_Finder.Faculties, context: SwiftData.ModelContext) -&gt; ()"
+                  moduleName = "PV-Vak-Finder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/berne/Documents/Xcode%20projects/Projects/PV-Vak-Finder/PV-Vak-Finder/PV-Vak-Finder/FacultyPicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1588">
+               </Location>
+               <Location
+                  uuid = "BF195595-DBE1-448A-BB35-81E7F8FD8150 - 8a8359b531ee3e8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PV_Vak_Finder.saveFaculties(selyear: PV_Vak_Finder.Years, per1: PV_Vak_Finder.Faculties, per2: PV_Vak_Finder.Faculties, per3: PV_Vak_Finder.Faculties, per4: PV_Vak_Finder.Faculties, context: SwiftData.ModelContext) -&gt; ()"
+                  moduleName = "PV-Vak-Finder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/berne/Documents/Xcode%20projects/Projects/PV-Vak-Finder/PV-Vak-Finder/PV-Vak-Finder/FacultyPicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1616">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
