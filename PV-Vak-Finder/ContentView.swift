@@ -32,24 +32,33 @@ struct ContentView: View {
             VStack{
                 ForEach(SelectedFaculties) { vak in
                     if(vak.year == selectedYear){
-                        HStack {
-                            VStack{
-                                Text("Periode 1")
-                                NavigationLink(vak.period1.rawValue) {CatalogItem( faculty: vak.period1)}.padding()
-                            }
-                            VStack{
-                                Text("Periode 2")
-                                NavigationLink(vak.period2.rawValue) {CatalogItem( faculty: vak.period2)}.padding()
-                            }
-                            VStack{
-                                Text("Periode 3")
-                                NavigationLink(vak.period3.rawValue) {CatalogItem( faculty: vak.period3)}.padding()
-                            }
-                            VStack{
-                                Text("Periode 4")
-                                NavigationLink(vak.period4.rawValue) {CatalogItem( faculty: vak.period4)}.padding()
+                        ZStack (alignment: .topLeading) {
+                            
+                            HStack (alignment: .top){
+                                VStack{
+                                    Text("Periode 1")
+                                    NavigationLink(vak.period1.rawValue) {CatalogItem( faculty: vak.period1)}.padding()
+                                }.padding()
+                                
+                                VStack{
+                                    Text("Periode 2")
+                                    NavigationLink(vak.period2.rawValue) {CatalogItem( faculty: vak.period2)}.padding()
+                                }.padding()
                             }.padding()
                         }
+                        ZStack (alignment: .bottomLeading){
+                            HStack (alignment: .bottom){
+                                VStack{
+                                    Text("Periode 3")
+                                    NavigationLink(vak.period3.rawValue) {CatalogItem( faculty: vak.period3)}.padding()
+                                }.padding()
+                                
+                                VStack{
+                                    Text("Periode 4")
+                                    NavigationLink(vak.period4.rawValue) {CatalogItem( faculty: vak.period4)}.padding()
+                                }.padding()
+                            }.padding()
+                        }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                 }
             }.padding()
